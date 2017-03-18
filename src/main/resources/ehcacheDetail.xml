@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ehcache>
+	<!-- 
+		hibernate 一级缓存: session(事务)缓存, 生命周期与session相同,
+		主要是解决事务问题(把未提交的数据,先存储到缓存中,一旦事务提交,则缓存所有数据同时提交)
+		session关闭 缓存就消失
+		hibernate 二级缓存: sessionFactory缓存, 主要是为了提升性能
+	 -->
+    <diskStore path="java.io.tmpdir"/>
+	
+	<!-- 
+		maxElementsInMemory: 内存支持缓存对象的数量
+		eternal： 是否永久有效, 如果为true则缓存对象不会自己销毁  如果为true   timeToIdleSeconds timeToLiveSeconds无效
+		timeToIdleSeconds：支持最大的空闲时间,在此时间如果没有请求访问则对象会被销毁  eternal必须设置为false
+		timeToLiveSeconds: 对象生命周期, 无论访问多少次,在给定的时间都会被销毁
+		overflowToDisk: 如果内存对象数量已满,是否支持溢出到硬盘, 如果为false则内存会调用替换算法
+		memoryStoreEvictionPolicy: 内存存储的替换算法     FIFO    LRU    LFU
+		diskPersistent: 是否支持跨JVM缓存, 
+		diskExpiryThreadIntervalSeconds: 两个JVM启动的最大间隔时间
+		
+            FIFO: First In First Out 先进先出, 并没有考虑到访问的时间和访问频率
+            LRU：Least Recently Used 最近最少使用算法, 替换出最近最少使用对象  (LRU)
+            LFU: Less Frequently Used: 最近未被使用算法, 替换访问频率最少的,与时间无关,与访问次数有关
+            -->
+       <defaultCache
+            maxElementsInMemory="1000"
+            eternal="false"
+            timeToIdleSeconds="10"
+            timeToLiveSeconds="10"
+            overflowToDisk="true"
+            memoryStoreEvictionPolicy="LFU" 
+            />    
+</ehcache>
