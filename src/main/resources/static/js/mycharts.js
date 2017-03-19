@@ -4,11 +4,11 @@
 
 
 /**
- * 绘制大型数据折线图 蓝色
+ * 绘制大型数据折线图 蓝色 StormWordCount系统吞吐量
  * @param myChart
  * @param echartsdata
  */
-function echartsBlueBrokenLineInit(myChart,echartsdata){
+function echartsBlueBrokenLineInit(myChart,echartsdata,titleText){
     console.info(echartsdata)
     option = {
         tooltip: {
@@ -19,7 +19,7 @@ function echartsBlueBrokenLineInit(myChart,echartsdata){
         },
         title: {
             left: 'center',
-            text: 'StormWordCount系统吞吐量',
+            text: titleText,
         },
         toolbox: {
             feature: {

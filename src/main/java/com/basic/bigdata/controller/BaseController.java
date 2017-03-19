@@ -32,6 +32,9 @@ public class BaseController {
     @Value("#{prop.StormWordCountGsonFile}")
     protected String StormWordCountGsonFile;
 
+    @Value("#{prop.StromHdfsBenchMarkGsonFile}")
+    protected String StormHdfsBenchMarkGsonFile;
+
     @ModelAttribute("BasePath")
     public String getBasePath(HttpServletRequest httpServletRequest){
         return httpServletRequest.getContextPath();

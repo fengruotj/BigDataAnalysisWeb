@@ -41,9 +41,11 @@ public class WebController extends BaseController{
         File boltGsonFile=new File(StormBoltGsonFilePath);
         File spoutGsonFile=new File(StormSpoutGsonFilePath);
         File wordcountGsonFile=new File(StormWordCountGsonFile);
+        File hdfsbenchmarkGsonFile=new File(StormHdfsBenchMarkGsonFile);
         modelAndView.addObject("boltGsonFilenames",boltGsonFile.list());
         modelAndView.addObject("spoutGsonFilenames",spoutGsonFile.list());
         modelAndView.addObject("wordcountGsonFilenames",wordcountGsonFile.list());
+        modelAndView.addObject("hdfsbenchmarkGsonFilenames",hdfsbenchmarkGsonFile.list());
         return modelAndView;
     }
 }

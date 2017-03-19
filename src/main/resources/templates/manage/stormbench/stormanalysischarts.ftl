@@ -75,7 +75,23 @@
               </div>
           </div>
       </div>
-        <div id="wordcountCharts" style="width: 100%;height:400px;background: #00d95a"></div>
+  <div id="wordcountCharts" style="width: 100%;height:400px;background: #00d95a"></div>
+
+  <br/>
+  <div class="container">
+      <div class="form-group">
+          <label class="col-sm-3 control-label">输入处理的文件名：</label>
+          <div class="col-sm-4">
+              <select id="hdfsbenchmarkChartsSelect" name="usertype" class="form-control">
+                  <option value="">====请选择====</option>
+              <#list hdfsbenchmarkGsonFilenames as name>
+                  <option value ="${name}">${name}</option>
+              </#list>
+              </select>
+          </div>
+      </div>
+  </div>
+        <div id="hdfsbenchmarkCharts" style="width: 100%;height:400px;background: #00d95a"></div>
 
             <!-- 模态框（Modal） -->
             <div class="modal fade" id="loaddata" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false"
@@ -95,9 +111,11 @@
                  var spoutChart = echarts.init(document.getElementById('spoutCharts'));
                  echartsRedBrokenLineInit(spoutChart,{});
                  var tupleChart = echarts.init(document.getElementById('tupleCharts'));
-                 echartsBlueBrokenLineInit(tupleChart,{});
+                 echartsBlueBrokenLineInit(tupleChart,{},'StormWordCount系统吞吐量');
                  var wordcountChart = echarts.init(document.getElementById('wordcountCharts'));
                  echartsBarGraphInit(wordcountChart,{});
+                 var hdfsbenchmarkChart = echarts.init(document.getElementById('hdfsbenchmarkCharts'));
+                 echartsBlueBrokenLineInit(hdfsbenchmarkChart,{},'HdfsBenchMark系统吞吐量(单位字节)');
 
                 $("#spoutChartsSelect").change(function(){
                     var value=$(this).children('option:selected').val();//这就是selected的值
@@ -117,6 +135,13 @@
                      var value=$(this).children('option:selected').val();//这就是selected的值
                      if(value!="") {
                          showWordCountEcharts(value);
+                     }
+                 });
+
+                 $("#hdfsbenchmarkChartsSelect").change(function(){
+                     var value=$(this).children('option:selected').val();//这就是selected的值
+                     if(value!="") {
+                         showHdfsBenchMarkEcharts(value);
                      }
                  });
              });
@@ -156,7 +181,7 @@
                   data:{'fileName':fileName},
                   type:"post",
                   success:function(data){
-                      echartsBlueBrokenLineInit(myChart,data);
+                      echartsBlueBrokenLineInit(myChart,data,'StormWordCount系统吞吐量');
                       $('#loaddata').modal('hide')
                   },
                   error:function(XMLHttpRequest, textStatus, errorThrown) {
@@ -178,6 +203,27 @@
                   type:"post",
                   success:function(data){
                       echartsBarGraphInit(myChart,data);
+                      $('#loaddata').modal('hide')
+                  },
+                  error:function(XMLHttpRequest, textStatus, errorThrown) {
+                      alert(XMLHttpRequest.status);
+                      alert(XMLHttpRequest.readyState);
+                      alert(textStatus);
+                  }
+              });
+          }
+
+          function showHdfsBenchMarkEcharts(fileName){
+              var myChart = echarts.init(document.getElementById('hdfsbenchmarkCharts'));
+              var url="/echarts/hdfsByteAnaylsis";
+              $('#loaddata').modal('show')
+              $.ajax({
+                  url:url,
+                  dataType:'json',
+                  data:{'fileName':fileName},
+                  type:"post",
+                  success:function(data){
+                      echartsBlueBrokenLineInit(myChart,data,'HdfsBenchMark系统吞吐量(单位字节)');
                       $('#loaddata').modal('hide')
                   },
                   error:function(XMLHttpRequest, textStatus, errorThrown) {

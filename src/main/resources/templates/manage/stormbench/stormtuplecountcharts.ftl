@@ -100,7 +100,7 @@
                   data:{},
                   type:"post",
                   success:function(data){
-                      echartsBlueBrokenLineInit(myChart,data);
+                      echartsBlueBrokenLineInit(myChart,data,'StormWordCount系统吞吐量');
                       $('#loaddata').modal('hide')
                   },
                   error:function(XMLHttpRequest, textStatus, errorThrown) {
