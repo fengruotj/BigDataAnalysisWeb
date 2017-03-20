@@ -1,9 +1,6 @@
 package com.basic.bigdata.controller;
 
-import com.basic.bigdata.service.TAdministratorService;
-import com.basic.bigdata.service.TSpouttuplecountService;
-import com.basic.bigdata.service.TTuplecountService;
-import com.basic.bigdata.service.TWordcountService;
+import com.basic.bigdata.service.*;
 import com.basic.bigdata.util.FreeMarkerUtil;
 import com.basic.bigdata.util.GsonUtil;
 import com.google.gson.Gson;
@@ -62,4 +59,6 @@ public class BaseController {
     @Autowired
     protected TWordcountService tWordcountService;
 
+    @Autowired
+    protected THdfsbytecountService tHdfsbytecountService;
 }

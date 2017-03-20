@@ -19,11 +19,12 @@ public class DataController extends BaseController {
     @RequestMapping(value = "/data/deleteStormBenchData"
             ,produces = "application/json;charset=UTF-8")
     @ResponseBody()
-    public String deleteData() throws IOException {
+    public String deleteStormBenchData() throws IOException {
         //return gsonUtil.readJsonStream(new FileInputStream(StormSpoutGsonFilePath+fileName));
         tWordcountService.deleteAll();
         tTuplecountService.deleteAll();
         tSpouttuplecountService.deleteAll();
+        tHdfsbytecountService.deleteAll();
         return gson.toJson(true);
     }
 }

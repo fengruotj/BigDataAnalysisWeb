@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>Storm系统吞吐量统计图表</title>
+    <title>Storm-Hdfs系统吞吐量统计图表</title>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +19,7 @@
 
   <div class="container">
         <div class="jumbotron">
-            <h2>StormWordCount系统吞吐量UI显示</h2>
+            <h2>Storm-Hdfs系统吞吐量UI显示</h2>
             <div class="row center-block">
                 <div class="btn-group" role="group" aria-label="...">
                     <button id="showresult" type="button" class="btn btn-primary">显示结果</button>
@@ -75,7 +75,7 @@
              // init()方法
              $(function () {
                  var myChart = echarts.init(document.getElementById('main'));
-                 echartsBlueBrokenLineInit(myChart,{},'StormWordCount系统吞吐量');
+                 echartsBlueBrokenLineInit(myChart,{},'Storm-Hdfs系统吞吐量(单位字节byte)');
                 $("#showresult").click(function(){
                     $('#loaddata').modal('show')
                     showEcharts();
@@ -93,14 +93,14 @@
 
           function showEcharts(){
               var myChart = echarts.init(document.getElementById('main'));
-              var url="/echarts/tupleCountTupleCount"
+              var url="/echarts/hdfsbytecountTupleCount"
               $.ajax({
                   url:url,
                   dataType:'json',
                   data:{},
                   type:"post",
                   success:function(data){
-                      echartsBlueBrokenLineInit(myChart,data,'StormWordCount系统吞吐量');
+                      echartsBlueBrokenLineInit(myChart,data,'Storm-Hdfs系统吞吐量(单位字节byte)');
                       $('#loaddata').modal('hide')
                   },
                   error:function(XMLHttpRequest, textStatus, errorThrown) {
@@ -113,7 +113,7 @@
 
           //保存当前输出结果以json格式保存，方便后面查看
           function saveEchartsResult(fileName){
-              var url="/bolt/saveresulttuplecount"
+              var url="/bolt/saveresulthdfsbytecount"
               $.ajax({
                   url:url,
                   dataType:'json',

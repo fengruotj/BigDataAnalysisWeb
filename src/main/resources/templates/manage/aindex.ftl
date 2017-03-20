@@ -476,6 +476,12 @@
                             </a>
                         </li>
                         <li class="nav-item  ">
+                            <a href="/manage_stormbench_stormhdfsbytecountcharts" class="nav-link " target="_blank">
+                                <span class="title">Storm-HdfsUI显示
+                                <br>系统吞吐量(单位字节)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
                             <a href="/storm/analysis" class="nav-link " target="_blank">
                                 <span class="title">StormBenchMark集中分析</span>
                             </a>

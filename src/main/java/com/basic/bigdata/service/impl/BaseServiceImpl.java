@@ -22,4 +22,7 @@ public class BaseServiceImpl {
 	@Resource
 	protected TWordcountDAO twordcountDAO;
 
+	@Resource
+	protected THdfsbytecountDAO tHdfsbytecountDAO;
+
 }

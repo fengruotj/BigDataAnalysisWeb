@@ -41,6 +41,7 @@
                 <value>classpath:hibernateconf/TTuplelatency.hbm.xml</value>
                 <value>classpath:hibernateconf/TSpouttuplecount.hbm.xml</value>
                 <value>classpath:hibernateconf/TWordcount.hbm.xml</value>
+                <value>classpath:hibernateconf/THdfsbytecount.hbm.xml</value>
             </list>
         </property>
 
