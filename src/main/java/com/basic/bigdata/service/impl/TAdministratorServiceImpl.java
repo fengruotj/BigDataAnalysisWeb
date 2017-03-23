@@ -55,7 +55,11 @@ public class TAdministratorServiceImpl extends BaseServiceImpl implements TAdmin
         Map map=new HashMap();
         map.put("username",username);
         map.put("password",password);
-        return (Administrator) tAdministratorDAO.findByProperty(map).get(0);
+        List byProperty = tAdministratorDAO.findByProperty(map);
+        if(byProperty.size()==0){
+            return null;
+        }else
+            return (Administrator) byProperty.get(0);
     }
 
     @Override
