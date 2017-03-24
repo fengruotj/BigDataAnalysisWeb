@@ -9,7 +9,7 @@ public class LinuxShellUitlTest {
 
     @Test
     public void testExec() throws Exception {
-        String exec = LinuxShellUitl.exec("120.77.83.207", "master", "123456", 22, "ls");
+        String exec = LinuxShellUitl.exec("120.77.83.207", "master", "123456", 22, "ls","linuxlog/outls.log");
         System.out.println(exec);
     }
 }

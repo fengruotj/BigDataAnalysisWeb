@@ -5,10 +5,7 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 
 /**
  * Created by 79875 on 2017/3/24.
@@ -24,10 +21,15 @@ public class LinuxShellUitl {
      * @param command	命令
      * @return
      */
-    public static String exec(String host,String user,String psw,int port,String command){
+    public static String exec(String host,String user,String psw,int port,String command,String outputFile) throws IOException {
         String result="";
         Session session =null;
         ChannelExec openChannel =null;
+        File file=new File(outputFile);
+        if(!file.exists()){
+            file.createNewFile();
+        }
+        BufferedWriter writer=new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputFile)));
         try {
             JSch jsch=new JSch();
             session = jsch.getSession(user, host, port);
@@ -45,11 +47,14 @@ public class LinuxShellUitl {
             BufferedReader reader = new BufferedReader(new InputStreamReader(in));
             String buf = null;
             while ((buf = reader.readLine()) != null) {
-                result+= new String(buf.getBytes("gbk"),"UTF-8")+"    <br>\r\n";
+                result+= new String(buf.getBytes("gbk"),"UTF-8")+"    \r\n";
+                writer.write(new String(buf.getBytes("gbk"),"UTF-8")+"\r\n");
             }
         } catch (JSchException | IOException e) {
             result+=e.getMessage();
+            writer.write(e.getMessage());
         }finally{
+            writer.close();
             if(openChannel!=null&&!openChannel.isClosed()){
                 openChannel.disconnect();
             }

@@ -38,7 +38,7 @@ public class LinuxShellController extends BaseController{
         return "";
     }
 
-    private String execLinuxShell(String commnd){
-       return LinuxShellUitl.exec(hostname, user, password, 22, commnd);
+    private String execLinuxShell(String commnd,String outFile) throws IOException {
+       return LinuxShellUitl.exec(hostname, user, password, 22, commnd,outFile);
     }
 }
