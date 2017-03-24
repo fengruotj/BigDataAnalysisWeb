@@ -32,6 +32,28 @@ public class BaseController {
     @Value("#{prop.StromHdfsBenchMarkGsonFile}")
     protected String StormHdfsBenchMarkGsonFile;
 
+
+    @Value("#{prop.hostname}")
+    protected String hostname;
+    @Value("#{prop.user}")
+    protected String user;
+    @Value("#{prop.password}")
+    protected String password;
+    @Value("#{prop.stormSentenceJar}")
+    protected String stormSentenceJar;
+    @Value("#{prop.stormSocketJar}")
+    protected String stormSocketJar;
+    @Value("#{prop.stormKafkaJar}")
+    protected String stormKafkaJar;
+    @Value("#{prop.stormHdfsJar}")
+    protected String stormHdfsJar;
+    @Value("#{prop.sparkSocektJar}")
+    protected String sparkSocektJar;
+    @Value("#{prop.sparkKafkajar}")
+    protected String sparkKafkajar;
+
+
+
     @ModelAttribute("BasePath")
     public String getBasePath(HttpServletRequest httpServletRequest){
         return httpServletRequest.getContextPath();

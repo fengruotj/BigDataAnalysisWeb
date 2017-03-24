@@ -507,98 +507,6 @@
                                 <span class="title">Date & Time Pickers</span>
                             </a>
                         </li>
-                        <li class="nav-item  ">
-                            <a href="components_color_pickers.html" class="nav-link ">
-                                <span class="title">Color Pickers</span>
-                                <span class="badge badge-danger">2</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_select2.html" class="nav-link ">
-                                <span class="title">Select2 Dropdowns</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_bootstrap_select.html" class="nav-link ">
-                                <span class="title">Bootstrap Select</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_multi_select.html" class="nav-link ">
-                                <span class="title">Multi Select</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_bootstrap_select_splitter.html" class="nav-link ">
-                                <span class="title">Select Splitter</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_typeahead.html" class="nav-link ">
-                                <span class="title">Typeahead Autocomplete</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_bootstrap_tagsinput.html" class="nav-link ">
-                                <span class="title">Bootstrap Tagsinput</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_bootstrap_switch.html" class="nav-link ">
-                                <span class="title">Bootstrap Switch</span>
-                                <span class="badge badge-success">6</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_bootstrap_maxlength.html" class="nav-link ">
-                                <span class="title">Bootstrap Maxlength</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_bootstrap_fileinput.html" class="nav-link ">
-                                <span class="title">Bootstrap File Input</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_bootstrap_touchspin.html" class="nav-link ">
-                                <span class="title">Bootstrap Touchspin</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_form_tools.html" class="nav-link ">
-                                <span class="title">Form Widgets & Tools</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_context_menu.html" class="nav-link ">
-                                <span class="title">Context Menu</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_editors.html" class="nav-link ">
-                                <span class="title">Markdown & WYSIWYG Editors</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_code_editors.html" class="nav-link ">
-                                <span class="title">Code Editors</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_ion_sliders.html" class="nav-link ">
-                                <span class="title">Ion Range Sliders</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_noui_sliders.html" class="nav-link ">
-                                <span class="title">NoUI Range Sliders</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="components_knob_dials.html" class="nav-link ">
-                                <span class="title">Knob Circle Dials</span>
-                            </a>
-                        </li>
                     </ul>
                 </li>
                 <li class="nav-item  ">
@@ -612,260 +520,6 @@
                             <a href="form_controls.html" class="nav-link ">
                                         <span class="title">Bootstrap Form
                                             <br>Controls</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="form_controls_md.html" class="nav-link ">
-                                        <span class="title">Material Design
-                                            <br>Form Controls</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="form_validation.html" class="nav-link ">
-                                <span class="title">Form Validation</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="form_validation_states_md.html" class="nav-link ">
-                                        <span class="title">Material Design
-                                            <br>Form Validation States</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="form_validation_md.html" class="nav-link ">
-                                        <span class="title">Material Design
-                                            <br>Form Validation</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="form_layouts.html" class="nav-link ">
-                                <span class="title">Form Layouts</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="form_input_mask.html" class="nav-link ">
-                                <span class="title">Form Input Mask</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="form_editable.html" class="nav-link ">
-                                <span class="title">Form X-editable</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="form_wizard.html" class="nav-link ">
-                                <span class="title">Form Wizard</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="form_icheck.html" class="nav-link ">
-                                <span class="title">iCheck Controls</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="form_image_crop.html" class="nav-link ">
-                                <span class="title">Image Cropping</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="form_fileupload.html" class="nav-link ">
-                                <span class="title">Multiple File Upload</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="form_dropzone.html" class="nav-link ">
-                                <span class="title">Dropzone File Upload</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item  ">
-                    <a href="javascript:;" class="nav-link nav-toggle">
-                        <i class="icon-bulb"></i>
-                        <span class="title">Elements</span>
-                        <span class="arrow"></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li class="nav-item  ">
-                            <a href="elements_steps.html" class="nav-link ">
-                                <span class="title">Steps</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="elements_lists.html" class="nav-link ">
-                                <span class="title">Lists</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="elements_ribbons.html" class="nav-link ">
-                                <span class="title">Ribbons</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item  ">
-                    <a href="javascript:;" class="nav-link nav-toggle">
-                        <i class="icon-briefcase"></i>
-                        <span class="title">Tables</span>
-                        <span class="arrow"></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li class="nav-item  ">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <span class="title">Static Tables</span>
-                                <span class="arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item ">
-                                    <a href="table_static_basic.html" class="nav-link "> Basic Tables </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="table_static_responsive.html" class="nav-link "> Responsive Tables </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <span class="title">Datatables</span>
-                                <span class="arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item ">
-                                    <a href="table_datatables_managed.html" class="nav-link "> Managed Datatables </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="table_datatables_buttons.html" class="nav-link "> Buttons Extension </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="table_datatables_colreorder.html" class="nav-link "> Colreorder Extension </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="table_datatables_rowreorder.html" class="nav-link "> Rowreorder Extension </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="table_datatables_scroller.html" class="nav-link "> Scroller Extension </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="table_datatables_fixedheader.html" class="nav-link "> FixedHeader Extension </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="table_datatables_responsive.html" class="nav-link "> Responsive Extension </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="table_datatables_editable.html" class="nav-link "> Editable Datatables </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="table_datatables_ajax.html" class="nav-link "> Ajax Datatables </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item  ">
-                    <a href="?p=" class="nav-link nav-toggle">
-                        <i class="icon-wallet"></i>
-                        <span class="title">Portlets</span>
-                        <span class="arrow"></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li class="nav-item  ">
-                            <a href="portlet_boxed.html" class="nav-link ">
-                                <span class="title">Boxed Portlets</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="portlet_light.html" class="nav-link ">
-                                <span class="title">Light Portlets</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="portlet_solid.html" class="nav-link ">
-                                <span class="title">Solid Portlets</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="portlet_ajax.html" class="nav-link ">
-                                <span class="title">Ajax Portlets</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="portlet_draggable.html" class="nav-link ">
-                                <span class="title">Draggable Portlets</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item  ">
-                    <a href="javascript:;" class="nav-link nav-toggle">
-                        <i class="icon-bar-chart"></i>
-                        <span class="title">Charts</span>
-                        <span class="arrow"></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li class="nav-item  ">
-                            <a href="charts_amcharts.html" class="nav-link ">
-                                <span class="title">amChart</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="charts_flotcharts.html" class="nav-link ">
-                                <span class="title">Flot Charts</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="charts_flowchart.html" class="nav-link ">
-                                <span class="title">Flow Charts</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="charts_google.html" class="nav-link ">
-                                <span class="title">Google Charts</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="charts_echarts.html" class="nav-link ">
-                                <span class="title">eCharts</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="charts_morris.html" class="nav-link ">
-                                <span class="title">Morris Charts</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <span class="title">HighCharts</span>
-                                <span class="arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item ">
-                                    <a href="charts_highcharts.html" class="nav-link "> HighCharts </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="charts_highstock.html" class="nav-link "> HighStock </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="charts_highmaps.html" class="nav-link "> HighMaps </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item  ">
-                    <a href="javascript:;" class="nav-link nav-toggle">
-                        <i class="icon-pointer"></i>
-                        <span class="title">Maps</span>
-                        <span class="arrow"></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li class="nav-item  ">
-                            <a href="maps_google.html" class="nav-link ">
-                                <span class="title">Google Maps</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="maps_vector.html" class="nav-link ">
-                                <span class="title">Vector Maps</span>
                             </a>
                         </li>
                     </ul>
@@ -1493,52 +1147,130 @@
                 </div>
             </div>
                     <!-- END WIDGET THUMB -->
-            <div class="row">
-                <div class="col-md-6 col-sm-6">
-                    <div class="portlet light ">
-                        <div class="portlet-title">
-                            <div class="caption font-green">
-                                <span class="caption-subject bold uppercase">Revenue</span>
-                                <span class="caption-helper">distance stats...</span>
-                            </div>
-                            <div class="actions">
-                                <a class="btn btn-circle btn-icon-only btn-default" href="#">
-                                    <i class="icon-cloud-upload"></i>
-                                </a>
-                                <a class="btn btn-circle btn-icon-only btn-default" href="#">
-                                    <i class="icon-wrench"></i>
-                                </a>
-                                <a class="btn btn-circle btn-icon-only btn-default" href="#">
-                                    <i class="icon-trash"></i>
-                                </a>
-                                <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#"> </a>
-                            </div>
-                        </div>
-                        <div class="portlet-body">
-                            <div id="dashboard_amchart_1" class="CSSAnimationChart"></div>
-                        </div>
+
+            <#--spark socketTextStreaming-->
+            <div class="socketTextStreaming">
+                <div class="row">
+                    <div class="m-heading-1 border-green m-bordered">
+                        <h3>spark socketTextStreaming</h3>
+                        <p> 这是一个对SparkStreamingWordCount进行benchmark测试。数据源是Socket管道通信，可能有网络瓶颈。Linux nc -lk 命令< 文件.txt 写入Socket管道中 文件是resultTweets.txt 3.23GB
+                        </p>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="portlet light ">
+
+                <div class="row">
+                    <div class="portlet box purple ">
                         <div class="portlet-title">
-                            <div class="caption font-red">
-                                <span class="caption-subject bold uppercase">Finance</span>
-                                <span class="caption-helper">distance stats...</span>
-                            </div>
-                            <div class="actions">
-                                <a href="#" class="btn btn-circle green btn-outline btn-sm">
-                                    <i class="fa fa-pencil"></i> Export </a>
-                                <a href="#" class="btn btn-circle green btn-outline btn-sm">
-                                    <i class="fa fa-print"></i> Print </a>
+                            <div class="caption">
+                                <i class="fa fa-gift"></i> 配置程序的运行参数 </div>
+                            <div class="tools">
+                                <a href="" class="collapse" data-original-title="" title=""> </a>
+                                <a href="#portlet-config" data-toggle="modal" class="config" data-original-title="" title=""> </a>
+                                <a href="" class="reload" data-original-title="" title=""> </a>
+                                <a href="" class="remove" data-original-title="" title=""> </a>
                             </div>
                         </div>
                         <div class="portlet-body">
-                            <div id="dashboard_amchart_3" class="CSSAnimationChart"></div>
+                            <h4 class="block">输入参数</h4>
+                            <form role="form">
+                                <div class="form-body">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn red" type="button">socket主机名</button>
+                                                    </span>
+                                                <input id="sockethostname" type="text" class="form-control"> </div>
+                                            <!-- /input-group -->
+                                        </div>
+                                        <!-- /.col-md-3 -->
+                                        <div class="col-md-4">
+                                            <div class="input-group">
+                                         <span class="input-group-btn">
+                                                        <button class="btn blue" type="button">socket端口号</button>
+                                                    </span>
+                                                <input id="socketport" type="number" class="form-control">
+                                            </div>
+                                            <!-- /input-group -->
+                                        </div>
+                                        <!-- /.col-md-3 -->
+
+                                        <div class="col-md-4">
+                                            <div class="input-group">
+                                          <span class="input-group-btn">
+                                                        <button class="btn blue" type="button">wordcountbolt并行度</button>
+                                                    </span>
+                                                <input id="kafkawordcountnum" type="number" class="form-control">
+                                            </div>
+                                            <!-- /input-group -->
+                                        </div>
+                                        <!-- /.col-md-4 -->
+                                        <!-- /.col-md-6 -->
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+                                <br/>
+                                <div class="form-actions noborder">
+                                    <button onclick="socketstreamingsubmit()" type="button" class="btn blue"><span class="md-click-circle md-click-animate" style="height: 73px; width: 73px; top: -11.5px; left: -5.5px;"></span>Submit</button>
+                                    <button onclick="socketstreamingcancel()" type="button" class="btn default">Cancel</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
+            <#--spark socketTextStreaming-->
+
+            <#--spark kafkaDirectStreaming-->
+            <div class="kafkaDirectStreaming">
+                <div class="row">
+                    <div class="m-heading-1 border-green m-bordered">
+                        <h3>spark kafkaDirectStreaming</h3>
+                        <p> 这是一个对SparkStreamingWordCount进行benchmark测试。数据源是kafka集群中 事先已经囤积好的数据消息（估计消息大概有7亿条）
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="portlet box purple ">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-gift"></i> 配置程序的运行参数 </div>
+                            <div class="tools">
+                                <a href="" class="collapse" data-original-title="" title=""> </a>
+                                <a href="#portlet-config" data-toggle="modal" class="config" data-original-title="" title=""> </a>
+                                <a href="" class="reload" data-original-title="" title=""> </a>
+                                <a href="" class="remove" data-original-title="" title=""> </a>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <h4 class="block">输入参数</h4>
+                            <form role="form">
+                                <div class="form-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn red" type="button">kafka主题名称</button>
+                                                    </span>
+                                                <input id="kafkaStreamingtopic" type="text" class="form-control"> </div>
+                                            <!-- /input-group -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+                                <br/>
+                                <div class="form-actions noborder">
+                                    <button onclick="kafkastreamingsubmit()" type="button" class="btn blue"><span class="md-click-circle md-click-animate" style="height: 73px; width: 73px; top: -11.5px; left: -5.5px;"></span>Submit</button>
+                                    <button onclick="kafkastreamingcancel()" type="button" class="btn default">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <#--spark kafkaDirectStreaming-->
+
             <div class="row">
                 <div class="col-md-6 col-sm-6">
                     <div class="portlet light ">
@@ -3067,6 +2799,23 @@
             cleanStormBenchMark();
         });
     });
+
+    function socketstreamingsubmit(){
+        alert("spark-socketstreaming submit");
+    }
+
+    function socketstreamingcancel(){
+        alert("spark-socketstreaming cancel");
+    }
+
+    function kafkastreamingsubmit(){
+        alert("spark-kafkastreaming submit");
+    }
+
+    function kafkastreamingcancel(){
+        alert("spark-kafkastreaming cancel");
+    }
+
 
     function cleanStormBenchMark(){
         $('#loaddata').modal('show')

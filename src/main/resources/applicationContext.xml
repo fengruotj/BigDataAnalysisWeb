@@ -68,6 +68,7 @@
         <property name="locations">
             <array>
                 <value>classpath:filePath.properties</value>
+                <value>classpath:linuxshell.properties</value>
             </array>
         </property>
     </bean>
