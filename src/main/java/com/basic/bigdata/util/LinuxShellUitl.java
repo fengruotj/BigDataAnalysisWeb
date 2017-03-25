@@ -13,6 +13,26 @@ import java.io.*;
 public class LinuxShellUitl {
 
     /**
+     * 获取操作linux Session对象
+     * @param host
+     * @param user
+     * @param psw
+     * @param port
+     * @return
+     * @throws JSchException
+     */
+    public static Session getSession(String host,String user,String psw,int port) throws JSchException {
+        JSch jsch=new JSch();
+        Session session = jsch.getSession(user, host, port);
+        java.util.Properties config = new java.util.Properties();
+        config.put("StrictHostKeyChecking", "no");
+        session.setConfig(config);
+        session.setPassword(psw);
+        session.connect();
+        return session;
+    }
+
+    /**
      * 远程 执行命令并返回结果调用过程 是同步的（执行完才会返回）
      * @param host	主机名
      * @param user	用户名
@@ -31,13 +51,7 @@ public class LinuxShellUitl {
         }
         BufferedWriter writer=new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputFile)));
         try {
-            JSch jsch=new JSch();
-            session = jsch.getSession(user, host, port);
-            java.util.Properties config = new java.util.Properties();
-            config.put("StrictHostKeyChecking", "no");
-            session.setConfig(config);
-            session.setPassword(psw);
-            session.connect();
+            session=getSession(host, user, psw, port);
             openChannel = (ChannelExec) session.openChannel("exec");
             openChannel.setCommand(command);
             int exitStatus = openChannel.getExitStatus();
