@@ -325,3 +325,138 @@ function echartsBarGraphInit(myChart,echartsdata){
     // 使用刚指定的配置项和数据显示图表。
     myChart.setOption(option);
 }
+
+function echartsDynamicLineInit(url,mychart,text,subtext){
+    var data=[];
+    var chart=mychart;
+
+    option = {
+        title: {
+            text: text,
+            subtext: subtext
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {
+                    backgroundColor: '#283b56'
+                }
+            }
+        },
+        legend: {
+            data:[]
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                dataView: {readOnly: false},
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        xAxis: [
+            {
+                type: 'category',
+                boundaryGap: true,
+                data: (function (){
+                    var now = new Date();
+                    var res = [];
+                    //var len = 10;
+                    //while (len--) {
+                    //    res.unshift(now.toLocaleTimeString().replace(/^\D*/,''));
+                    //    now = new Date(now - 2000);
+                    //}
+                    return res;
+                })()
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                scale: true,
+                name: '数值',
+                max: 100,
+                min: 0,
+                boundaryGap: [0.2, 0.2]
+            }
+        ],
+        series: [
+            //{
+            //    name:'root1',
+            //    type:'line',
+            //    data:(function (){
+            //        var res = [];
+            //        //var len = 10;
+            //        //while (len--) {
+            //        //    res.push((Math.random()*10 + 5).toFixed(1) - 0);
+            //        //}
+            //        return res;
+            //    })()
+            //},
+            //{
+            //    name:'root2',
+            //    type:'line',
+            //    data:(function (){
+            //        var res = [];
+            //        //var len = 10;
+            //        //while (len--) {
+            //        //    res.push((Math.random()*10 + 5).toFixed(1) - 0);
+            //        //}
+            //        return res;
+            //    })()
+            //}
+        ]
+    };
+    setInterval(function (){
+        $.ajax({
+            url:url,
+            dataType:'json',
+            data:{},
+            type:"post",
+            success:function(data){
+                var hosts=data.hosts;
+                var values=data.value;
+                for(var i=0;i< hosts.length; i++){
+                    var serie={};
+                    serie.name=hosts[i];
+                    serie.type='line';
+                    serie.data=(function (){
+                        var res = [];
+                        //var len = 10;
+                        //while (len--) {
+                        //    res.push((Math.random()*10 + 5).toFixed(1) - 0);
+                        //}
+                        return res;
+                    })();
+                    //serie.areaStyle={
+                    //    normal: {
+                    //        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    //            offset: 0,
+                    //            color: 'rgb(255, 158, 68)'
+                    //        }, {
+                    //            offset: 1,
+                    //            color: 'rgb(255, 70, 131)'
+                    //        }])
+                    //    }
+                    //};
+                    serie.smooth= true;
+                    serie.symbol='circle';
+                    option.series.push(serie);
+                    option.legend.data.push(hosts[i]);
+                    axisData = (new Date()).toLocaleTimeString().replace(/^\D*/,'');
+
+                    var data0 = option.series[0].data;
+                    data0.push(values[i]);
+                    option.xAxis[0].data.push(axisData);
+                }
+                chart.setOption(option);
+            },
+            error:function(XMLHttpRequest, textStatus, errorThrown) {
+                //alert(XMLHttpRequest.status);
+                //alert(XMLHttpRequest.readyState);
+                //alert(textStatus);
+            }
+        });
+    }, 1000);
+}

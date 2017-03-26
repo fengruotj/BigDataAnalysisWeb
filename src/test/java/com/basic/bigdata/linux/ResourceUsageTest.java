@@ -12,10 +12,15 @@ public class ResourceUsageTest {
     IoUsage ioUsage=IoUsage.getInstance();
     NetUsage netUsage=NetUsage.getInstance();
 
+    private String hosts="120.77.83.207";
+    private String user="master";
+    private String passwd="123456";
+    private int port=22;
+
     @Test
     public void testcpu() throws Exception {
         while(true){
-            System.out.println(cpuUsage.get("120.77.83.207", "master", "123456", 22));
+            System.out.println(cpuUsage.get(hosts, "master", "123456", 22));
             Thread.sleep(5000);
         }
     }
@@ -23,7 +28,7 @@ public class ResourceUsageTest {
     @Test
     public void testmemory() throws Exception {
         while(true){
-            System.out.println(memUsage.get("120.77.83.207", "master", "123456", 22));
+            System.out.println(memUsage.get(hosts, "master", "123456", 22));
             Thread.sleep(5000);
         }
     }
@@ -31,7 +36,7 @@ public class ResourceUsageTest {
     @Test
     public void testdiskio() throws Exception {
         while(true){
-            System.out.println(ioUsage.get("120.77.83.207", "master", "123456", 22));
+            System.out.println(ioUsage.get(hosts, "master", "123456", 22));
             Thread.sleep(5000);
         }
     }
@@ -39,7 +44,7 @@ public class ResourceUsageTest {
     @Test
     public void testNetwork() throws Exception {
         while(true){
-            System.out.println(netUsage.get("120.77.83.207", "master", "123456", 22));
+            System.out.println(netUsage.get(hosts, "master", "123456", 22));
             Thread.sleep(5000);
         }
     }

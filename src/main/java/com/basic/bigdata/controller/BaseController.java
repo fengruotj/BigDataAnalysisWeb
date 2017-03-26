@@ -1,5 +1,6 @@
 package com.basic.bigdata.controller;
 
+import com.basic.bigdata.linux.CpuUsage;
 import com.basic.bigdata.service.*;
 import com.basic.bigdata.util.FreeMarkerUtil;
 import com.basic.bigdata.util.GsonUtil;
@@ -52,7 +53,8 @@ public class BaseController {
     @Value("#{prop.sparkKafkajar}")
     protected String sparkKafkajar;
 
-
+    @Value("#{prop.clusterhosts}")
+    protected String clusterhosts;
 
     @ModelAttribute("BasePath")
     public String getBasePath(HttpServletRequest httpServletRequest){
@@ -83,4 +85,6 @@ public class BaseController {
 
     @Autowired
     protected THdfsbytecountService tHdfsbytecountService;
+
+    protected CpuUsage cpuUsage=CpuUsage.getInstance();
 }
