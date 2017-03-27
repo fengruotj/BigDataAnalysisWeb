@@ -74,6 +74,7 @@ public class CpuUsage extends ResourceUsage {
             }
             //第二次采集CPU时间
             long endTime = System.currentTimeMillis();
+            session= LinuxShellUitl.getSession(host, name, psw, port);
             openChannel2= (ChannelExec) session.openChannel("exec");
             openChannel2.setCommand(command);
             int exitStatus2 = openChannel2.getExitStatus();
