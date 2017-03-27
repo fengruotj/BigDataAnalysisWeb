@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-      <title>集群CPU监控界面</title>
+      <title>集群Memory监控界面</title>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,7 @@
   <body>
   <div class="container">
       <div class="jumbotron">
-          <h2>集群CPU利用率监控UI显示</h2>
+          <h2>集群Memory利用率监控UI显示</h2>
           <div class="row center-block">
               <div class="btn-group" role="group" aria-label="...">
                   <button id="showresult" type="button" class="btn btn-primary">显示结果</button>
@@ -35,7 +35,7 @@
       // init()方法
       $(function () {
           var myChart = echarts.init(document.getElementById('main'));
-          echartsDynamicLineInit('/resoureusage/cpuusage',myChart,'集群CPU利用率监控UI显示','显示当前集群CPU');
+          echartsDynamicLineInit('/resoureusage/memoryusage',myChart,'集群Memory利用率监控UI显示','显示当前集群Memory');
       });
 
   </script>

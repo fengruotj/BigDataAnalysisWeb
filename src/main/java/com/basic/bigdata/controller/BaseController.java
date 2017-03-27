@@ -1,6 +1,9 @@
 package com.basic.bigdata.controller;
 
 import com.basic.bigdata.linux.CpuUsage;
+import com.basic.bigdata.linux.IoUsage;
+import com.basic.bigdata.linux.MemUsage;
+import com.basic.bigdata.linux.NetUsage;
 import com.basic.bigdata.service.*;
 import com.basic.bigdata.util.FreeMarkerUtil;
 import com.basic.bigdata.util.GsonUtil;
@@ -87,4 +90,10 @@ public class BaseController {
     protected THdfsbytecountService tHdfsbytecountService;
 
     protected CpuUsage cpuUsage=CpuUsage.getInstance();
+
+    protected MemUsage memUsage=MemUsage.getInstance();
+
+    protected IoUsage ioUsage=IoUsage.getInstance();
+
+    protected NetUsage netUsage=NetUsage.getInstance();
 }

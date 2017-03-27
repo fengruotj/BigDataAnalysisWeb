@@ -53,7 +53,7 @@ public class NetUsage extends ResourceUsage {
                 if(line.startsWith("eth0")){
                     log.info(line);
                     String[] temp = line.split("\\s+");
-                    inSize1 = Long.parseLong(temp[1].substring(5)); //Receive bytes,单位为Byte
+                    inSize1 = Long.parseLong(temp[1]); //Receive bytes,单位为Byte
                     outSize1 = Long.parseLong(temp[9]);             //Transmit bytes,单位为Byte
                     break;
                 }
@@ -81,7 +81,7 @@ public class NetUsage extends ResourceUsage {
                 if(line.startsWith("eth0")){
                     log.info(line);
                     String[] temp = line.split("\\s+");
-                    inSize2 = Long.parseLong(temp[1].substring(5));
+                    inSize2 = Long.parseLong(temp[1]);
                     outSize2 = Long.parseLong(temp[9]);
                     break;
                 }
@@ -89,9 +89,10 @@ public class NetUsage extends ResourceUsage {
             if(inSize1 != 0 && outSize1 !=0 && inSize2 != 0 && outSize2 !=0){
                 float interval = (float)(endTime - startTime)/1000;
                 //网口传输速度,单位为bps
-                float curRate = (float)(inSize2 - inSize1 + outSize2 - outSize1)*8/(1000000*interval);
-                netUsage = curRate/TotalBandwidth;
-                log.info("本节点网口速度为: " + curRate + "Mbps");
+                float curRate = (float)(inSize2 - inSize1 + outSize2 - outSize1)*8/(1000*interval);
+//                netUsage = curRate/TotalBandwidth;
+                netUsage=curRate;
+                log.info("本节点网口速度为: " + curRate + "Kbps");
                 log.info("本节点网络带宽使用率为: " + netUsage);
             }
             in2.close();

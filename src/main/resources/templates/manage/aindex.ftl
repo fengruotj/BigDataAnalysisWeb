@@ -1100,9 +1100,9 @@
                             <div class="number">
                                 <span data-counter="counterup" data-value="1349">0</span>
                             </div>
-                            <div class="desc"> New Feedbacks </div>
+                            <div class="desc"> 集群CPU监控 </div>
                         </div>
-                        <a class="more" href="javascript:;"> View more
+                        <a class="more" href="/manage_resourceusage_cpuusage" target="_blank" > View more
                             <i class="m-icon-swapright m-icon-white"></i>
                         </a>
                     </div>
@@ -1115,9 +1115,9 @@
                         <div class="details">
                             <div class="number">
                                 <span data-counter="counterup" data-value="12,5">0</span>M$ </div>
-                            <div class="desc"> Total Profit </div>
+                            <div class="desc"> 集群Memory监控 </div>
                         </div>
-                        <a class="more" href="javascript:;"> View more
+                        <a class="more" href="/manage_resourceusage_memoryusage" target="_blank" > View more
                             <i class="m-icon-swapright m-icon-white"></i>
                         </a>
                     </div>
@@ -1131,9 +1131,9 @@
                             <div class="number">
                                 <span data-counter="counterup" data-value="549">0</span>
                             </div>
-                            <div class="desc"> New Orders </div>
+                            <div class="desc"> 集群IO监控 </div>
                         </div>
-                        <a class="more" href="javascript:;"> View more
+                        <a class="more" href="/manage_resourceusage_iousage" target="_blank" > View more
                             <i class="m-icon-swapright m-icon-white"></i>
                         </a>
                     </div>
@@ -1146,9 +1146,9 @@
                         <div class="details">
                             <div class="number"> +
                                 <span data-counter="counterup" data-value="89"></span>% </div>
-                            <div class="desc"> Brand Popularity </div>
+                            <div class="desc"> 集群网络监控 </div>
                         </div>
-                        <a class="more" href="javascript:;"> View more
+                        <a class="more" href="/manage_resourceusage_networkusage" target="_blank"> View more
                             <i class="m-icon-swapright m-icon-white"></i>
                         </a>
                     </div>

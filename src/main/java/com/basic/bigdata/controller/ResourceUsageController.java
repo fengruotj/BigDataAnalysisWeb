@@ -32,4 +32,52 @@ public class ResourceUsageController extends BaseController {
         map.put("value",list);
         return gson.toJson(map);
     }
+
+    @RequestMapping(value = "/resoureusage/memoryusage"
+            ,produces = "application/json;charset=UTF-8")
+    @ResponseBody()
+    public String memoryUsage() throws IOException, JSchException {
+        Map map=new HashMap<>();
+        String[] hosts = clusterhosts.split(",");
+        map.put("hosts",hosts);
+        List<Float> list=new ArrayList();
+        for(String host:hosts){
+            float v = memUsage.get(host, user, password, 22);
+            list.add(v*100);
+        }
+        map.put("value",list);
+        return gson.toJson(map);
+    }
+
+    @RequestMapping(value = "/resoureusage/iousage"
+            ,produces = "application/json;charset=UTF-8")
+    @ResponseBody()
+    public String ioUsage() throws IOException, JSchException {
+        Map map=new HashMap<>();
+        String[] hosts = clusterhosts.split(",");
+        map.put("hosts",hosts);
+        List<Float> list=new ArrayList();
+        for(String host:hosts){
+            float v = ioUsage.get(host, user, password, 22);
+            list.add(v*100);
+        }
+        map.put("value",list);
+        return gson.toJson(map);
+    }
+
+    @RequestMapping(value = "/resoureusage/networkusage"
+            ,produces = "application/json;charset=UTF-8")
+    @ResponseBody()
+    public String networkUsage() throws IOException, JSchException {
+        Map map=new HashMap<>();
+        String[] hosts = clusterhosts.split(",");
+        map.put("hosts",hosts);
+        List<Float> list=new ArrayList();
+        for(String host:hosts){
+            float v = netUsage.get(host, user, password, 22);
+            list.add(v*100);
+        }
+        map.put("value",list);
+        return gson.toJson(map);
+    }
 }
