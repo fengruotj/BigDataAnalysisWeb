@@ -329,7 +329,7 @@ function echartsBarGraphInit(myChart,echartsdata){
 function echartsDynamicLineInit(url,mychart,text,subtext){
     var data=[];
     var chart=mychart;
-
+    var m_bool=true;
     option = {
         title: {
             text: text,
@@ -409,64 +409,69 @@ function echartsDynamicLineInit(url,mychart,text,subtext){
         ]
     };
     setInterval(function (){
-        $.ajax({
-            url:url,
-            dataType:'json',
-            data:{},
-            type:"post",
-            success:function(data){
-                var hosts=data.hosts;
-                var values=data.value;
-                for(var i=0;i< hosts.length; i++){
-                    var serie={};
-                    serie.name=hosts[i];
-                    serie.type='line';
-                    serie.data=(function (){
-                        var res = [];
-                        //var len = 10;
-                        //while (len--) {
-                        //    res.push((Math.random()*10 + 5).toFixed(1) - 0);
-                        //}
-                        return res;
-                    })();
-                    //serie.areaStyle={
-                    //    normal: {
-                    //        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                    //            offset: 0,
-                    //            color: 'rgb(255, 158, 68)'
-                    //        }, {
-                    //            offset: 1,
-                    //            color: 'rgb(255, 70, 131)'
-                    //        }])
-                    //    }
-                    //};
-                    serie.smooth= true;
-                    serie.symbol='circle';
-                    option.series.push(serie);
-                    option.legend.data.push(hosts[i]);
+        if(m_bool){
+            $.ajax({
+                url:url,
+                dataType:'json',
+                data:{},
+                type:"post",
+                success:function(data){
+                    m_bool=true;
+                    var hosts=data.hosts;
+                    var values=data.value;
+                    for(var i=0;i< hosts.length; i++){
+                        var serie={};
+                        serie.name=hosts[i];
+                        serie.type='line';
+                        serie.data=(function (){
+                            var res = [];
+                            //var len = 10;
+                            //while (len--) {
+                            //    res.push((Math.random()*10 + 5).toFixed(1) - 0);
+                            //}
+                            return res;
+                        })();
+                        //serie.areaStyle={
+                        //    normal: {
+                        //        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        //            offset: 0,
+                        //            color: 'rgb(255, 158, 68)'
+                        //        }, {
+                        //            offset: 1,
+                        //            color: 'rgb(255, 70, 131)'
+                        //        }])
+                        //    }
+                        //};
+                        serie.smooth= true;
+                        serie.symbol='circle';
+                        option.series.push(serie);
+                        option.legend.data.push(hosts[i]);
 
-                    var data0 = option.series[i].data;
-                    //data0.shift();
-                    data0.push(values[i]);
+                        var data0 = option.series[i].data;
+                        //data0.shift();
+                        data0.push(values[i]);
+                    }
+                    axisData = (new Date()).toLocaleTimeString().replace(/^\D*/,'');
+                    //option.xAxis[0].data.shift();
+                    option.xAxis[0].data.push(axisData);
+                    chart.setOption(option);
+                },
+                error:function(XMLHttpRequest, textStatus, errorThrown) {
+                    m_bool=true;
+                    //alert(XMLHttpRequest.status);
+                    //alert(XMLHttpRequest.readyState);
+                    //alert(textStatus);
                 }
-                axisData = (new Date()).toLocaleTimeString().replace(/^\D*/,'');
-                //option.xAxis[0].data.shift();
-                option.xAxis[0].data.push(axisData);
-                chart.setOption(option);
-            },
-            error:function(XMLHttpRequest, textStatus, errorThrown) {
-                //alert(XMLHttpRequest.status);
-                //alert(XMLHttpRequest.readyState);
-                //alert(textStatus);
-            }
-        });
-    }, 3000);
+            });
+            m_bool=false;
+        }
+    }, 1000);
 }
 
 function echartsDynamicLineNetworkInit(url,mychart,text,subtext){
     var data=[];
     var chart=mychart;
-
+    var m_bool=true;
     option = {
         title: {
             text: text,
@@ -545,56 +550,60 @@ function echartsDynamicLineNetworkInit(url,mychart,text,subtext){
         ]
     };
     setInterval(function (){
-        $.ajax({
-            url:url,
-            dataType:'json',
-            data:{},
-            type:"post",
-            success:function(data){
-                var hosts=data.hosts;
-                var values=data.value;
-                for(var i=0;i< hosts.length; i++){
-                    var serie={};
-                    serie.name=hosts[i];
-                    serie.type='line';
-                    serie.data=(function (){
-                        var res = [];
-                        //var len = 10;
-                        //while (len--) {
-                        //    res.push((Math.random()*10 + 5).toFixed(1) - 0);
-                        //}
-                        return res;
-                    })();
-                    //serie.areaStyle={
-                    //    normal: {
-                    //        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                    //            offset: 0,
-                    //            color: 'rgb(255, 158, 68)'
-                    //        }, {
-                    //            offset: 1,
-                    //            color: 'rgb(255, 70, 131)'
-                    //        }])
-                    //    }
-                    //};
-                    serie.smooth= true;
-                    serie.symbol='circle';
-                    option.series.push(serie);
-                    option.legend.data.push(hosts[i]);
+        if(m_bool){
+            $.ajax({
+                url:url,
+                dataType:'json',
+                data:{},
+                type:"post",
+                success:function(data){
+                    m_bool=true;
+                    var hosts=data.hosts;
+                    var values=data.value;
+                    for(var i=0;i< hosts.length; i++){
+                        var serie={};
+                        serie.name=hosts[i];
+                        serie.type='line';
+                        serie.data=(function (){
+                            var res = [];
+                            //var len = 10;
+                            //while (len--) {
+                            //    res.push((Math.random()*10 + 5).toFixed(1) - 0);
+                            //}
+                            return res;
+                        })();
+                        //serie.areaStyle={
+                        //    normal: {
+                        //        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        //            offset: 0,
+                        //            color: 'rgb(255, 158, 68)'
+                        //        }, {
+                        //            offset: 1,
+                        //            color: 'rgb(255, 70, 131)'
+                        //        }])
+                        //    }
+                        //};
+                        serie.smooth= true;
+                        serie.symbol='circle';
+                        option.series.push(serie);
+                        option.legend.data.push(hosts[i]);
 
-                    var data0 = option.series[i].data;
-                    //data0.shift();
-                    data0.push(values[i]);
+                        var data0 = option.series[i].data;
+                        //data0.shift();
+                        data0.push(values[i]);
+                    }
+                    axisData = (new Date()).toLocaleTimeString().replace(/^\D*/,'');
+                    //option.xAxis[0].data.shift();
+                    option.xAxis[0].data.push(axisData);
+                    chart.setOption(option);
+                },
+                error:function(XMLHttpRequest, textStatus, errorThrown) {
+                    m_bool=true;
+                    //alert(XMLHttpRequest.status);
+                    //alert(XMLHttpRequest.readyState);
+                    //alert(textStatus);
                 }
-                axisData = (new Date()).toLocaleTimeString().replace(/^\D*/,'');
-                //option.xAxis[0].data.shift();
-                option.xAxis[0].data.push(axisData);
-                chart.setOption(option);
-            },
-            error:function(XMLHttpRequest, textStatus, errorThrown) {
-                //alert(XMLHttpRequest.status);
-                //alert(XMLHttpRequest.readyState);
-                //alert(textStatus);
-            }
-        });
-    }, 3000);
+            });
+        }
+    }, 1000);
 }
