@@ -4,6 +4,7 @@ import com.basic.bigdata.Application;
 import com.basic.bigdata.model.THdfsbytecount;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.boot.test.WebIntegrationTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -24,7 +25,7 @@ import java.sql.Timestamp;
 @Transactional(propagation= Propagation.REQUIRED)
 public class THdfsbytecountServiceTest {
 
-    @Resource
+    @Autowired
     THdfsbytecountService hdfsbytecountService;
 
     @Test

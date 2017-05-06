@@ -24,7 +24,6 @@ public class THdfsByteController extends BaseController {
 
     /**
      * 将tupleCount统计结果输出到Echarts界面上
-     * @return
      * @throws IOException
      */
     @RequestMapping(value = "/echarts/hdfsbytecountTupleCount"

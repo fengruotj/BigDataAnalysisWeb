@@ -40,7 +40,7 @@ public class ResourceUsageController extends BaseController {
         Map map=new HashMap<>();
         String[] hosts = clusterhosts.split(",");
         map.put("hosts",hosts);
-        List<Float> list=new ArrayList();
+        List<Float> list=new ArrayList<>();
         for(String host:hosts){
             float v = memUsage.get(host, user, password, 22);
             list.add(v*100);
