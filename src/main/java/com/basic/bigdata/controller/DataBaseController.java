@@ -12,9 +12,9 @@ import java.io.IOException;
  * Created by 79875 on 2017/3/9.
  */
 @Controller
-public class DataController extends BaseController {
+public class DataBaseController extends BaseController {
 
-    private Logger logger = LoggerFactory.getLogger(DataController.class);
+    private Logger logger = LoggerFactory.getLogger(DataBaseController.class);
 
     @RequestMapping(value = "/data/deleteStormBenchData"
             ,produces = "application/json;charset=UTF-8")

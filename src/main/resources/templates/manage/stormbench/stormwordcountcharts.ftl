@@ -107,7 +107,7 @@
              // init()方法
              $(function () {
                  var myChart = echarts.init(document.getElementById('main'));
-                 echartsBarGraphInit(myChart,{});
+                 echartsBarGraphInit(myChart,{},'WordCount单词统计结果显示');
                 $("#showresult").click(function(){
                     $('#loaddata').modal('show')
                     var url="/echarts/wordCountTimeLine"
@@ -148,7 +148,7 @@
                   data:{},
                   type:"post",
                   success:function(data){
-                      echartsBarGraphInit(myChart,data);
+                      echartsBarGraphInit(myChart,data,'WordCount单词统计结果显示');
                       $('#loaddata').modal('hide')
                   },
                   error:function(XMLHttpRequest, textStatus, errorThrown) {

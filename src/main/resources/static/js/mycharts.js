@@ -2,6 +2,71 @@
  * Created by 79875 on 2017/3/10.
  */
 
+/**
+ * Echarts标准饼状图绘制
+ * @param myChart
+ * @param echartsdata
+ * @param titleText
+ */
+function echartsPieBarInit(myChart,echartsdata,titleText) {
+    option = {
+        title : {
+            text: titleText,
+            subtext: 'Echarts',
+            x:'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient : 'vertical',
+            x : 'left',
+            data:echartsdata.legend
+            //data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {
+                    show: true,
+                    type: ['pie', 'funnel','bar'],
+                    option: {
+                        funnel: {
+                            x: '25%',
+                            width: '50%',
+                            funnelAlign: 'left',
+                            max: 1548
+                        }
+                    }
+                },
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        calculable : true,
+        series : [
+            {
+                name:'数据',
+                type:'pie',
+                radius : '55%',
+                center: ['50%', '60%'],
+                data:echartsdata.piedata
+                // data:[
+                //     {value:335, name:'直接访问'},
+                //     {value:310, name:'邮件营销'},
+                //     {value:234, name:'联盟广告'},
+                //     {value:135, name:'视频广告'},
+                //     {value:1548, name:'搜索引擎'}
+                // ]
+            }
+        ]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+}
 
 /**
  * 绘制大型数据折线图 蓝色 StormWordCount系统吞吐量
@@ -250,7 +315,7 @@ function echartsRedBrokenLineInit(myChart,echartsdata){
  * @param myChart
  * @param echartsdata
  */
-function echartsBarGraphInit(myChart,echartsdata){
+function echartsBarGraphInit(myChart,echartsdata,titleText){
     console.info(echartsdata)
     option = {
         tooltip : {
@@ -258,7 +323,8 @@ function echartsBarGraphInit(myChart,echartsdata){
         },
         title: {
             left: 'center',
-            text: 'WordCount单词统计结果显示',
+            //text: 'WordCount单词统计结果显示',
+            text:titleText
         },
         toolbox: {
             show : true,

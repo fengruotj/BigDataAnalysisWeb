@@ -7,12 +7,14 @@ import com.basic.bigdata.linux.NetUsage;
 import com.basic.bigdata.service.*;
 import com.basic.bigdata.util.FreeMarkerUtil;
 import com.basic.bigdata.util.GsonUtil;
+import com.basic.bigdata.util.JedisPoolUtil;
 import com.google.gson.Gson;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import redis.clients.jedis.JedisPool;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -96,4 +98,6 @@ public class BaseController {
     protected IoUsage ioUsage=IoUsage.getInstance();
 
     protected NetUsage netUsage=NetUsage.getInstance();
+
+    protected JedisPool jedisPool= JedisPoolUtil.getJedisPoolInstance();
 }
