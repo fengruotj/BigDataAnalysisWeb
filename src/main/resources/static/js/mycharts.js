@@ -7,7 +7,7 @@
  * echarts 模块化编程思想
  * @type {Object}
  */
-var echarts = new Object({
+var echartsUtil = new Object({
     m1: function () {
         //function 1
     },
@@ -208,7 +208,7 @@ function echartsBlueBrokenLineInit(myChart,echartsdata,titleText){
  * @param myChart
  * @param echartsdata
  */
-function echartsRedBrokenLineInit(myChart,echartsdata){
+function echartsRedBrokenLineInit(myChart, echartsdata, titleText) {
     console.info(echartsdata)
     option = {
         tooltip: {
@@ -219,7 +219,7 @@ function echartsRedBrokenLineInit(myChart,echartsdata){
         },
         title: {
             left: 'center',
-            text: 'Storm输入源吞吐量测试结果',
+            text: titleText,
         },
         toolbox: {
             feature: {

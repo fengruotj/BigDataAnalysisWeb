@@ -27,7 +27,7 @@ public class TPredicthotkeyController extends BaseController {
         List<Integer> tupleCountList = tPredicthotkeyService.getKeySizeList();
         for (int i = 0; i < tupleCountList.size(); i++) {
             Integer aLong = tupleCountList.get(i);
-            tupleCountList.set(i, (aLong * 16 + 48));
+            tupleCountList.set(i, (aLong * 24 + 48));
         }
         EchartsSyopsisMapMemory syopsisMapMemory = new EchartsSyopsisMapMemory(idList, tupleCountList);
         return gson.toJson(syopsisMapMemory);
