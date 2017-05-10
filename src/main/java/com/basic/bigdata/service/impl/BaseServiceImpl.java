@@ -25,4 +25,6 @@ public class BaseServiceImpl {
 	@Resource
 	protected THdfsbytecountDAO tHdfsbytecountDAO;
 
+    @Resource
+    protected TPredicthotkeyDao tPredicthotkeyDao;
 }

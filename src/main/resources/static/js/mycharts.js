@@ -2,6 +2,20 @@
  * Created by 79875 on 2017/3/10.
  */
 
+
+/**
+ * echarts 模块化编程思想
+ * @type {Object}
+ */
+var echarts = new Object({
+    m1: function () {
+        //function 1
+    },
+    m2: function () {
+        //function 2
+    }
+});
+
 /**
  * Echarts标准饼状图绘制
  * @param myChart

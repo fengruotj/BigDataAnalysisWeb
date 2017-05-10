@@ -109,11 +109,11 @@
              // init()方法
              $(function () {
                  var spoutChart = echarts.init(document.getElementById('spoutCharts'));
-                 echartsRedBrokenLineInit(spoutChart,{});
+                 echartsRedBrokenLineInit(spoutChart, {}, 'Storm输入源吞吐量测试结果');
                  var tupleChart = echarts.init(document.getElementById('tupleCharts'));
                  echartsBlueBrokenLineInit(tupleChart,{},'StormWordCount系统吞吐量');
                  var wordcountChart = echarts.init(document.getElementById('wordcountCharts'));
-                 echartsBarGraphInit(wordcountChart,{});
+                 echartsBarGraphInit(wordcountChart, {}, 'WordCount单词统计结果显示');
                  var hdfsbenchmarkChart = echarts.init(document.getElementById('hdfsbenchmarkCharts'));
                  echartsBlueBrokenLineInit(hdfsbenchmarkChart,{},'HdfsBenchMark系统吞吐量(单位字节)');
 
@@ -160,7 +160,7 @@
                   data:{'fileName':fileName},
                   type:"post",
                   success:function(data){
-                      echartsRedBrokenLineInit(myChart,data);
+                      echartsRedBrokenLineInit(myChart, data, 'Storm输入源吞吐量测试结果');
                       $('#loaddata').modal('hide')
                   },
                   error:function(XMLHttpRequest, textStatus, errorThrown) {
@@ -202,7 +202,7 @@
                   data:{'fileName':fileName},
                   type:"post",
                   success:function(data){
-                      echartsBarGraphInit(myChart,data);
+                      echartsBarGraphInit(myChart, data, 'WordCount单词统计结果显示');
                       $('#loaddata').modal('hide')
                   },
                   error:function(XMLHttpRequest, textStatus, errorThrown) {

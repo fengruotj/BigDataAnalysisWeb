@@ -75,7 +75,7 @@
              // init()方法
              $(function () {
                  var myChart = echarts.init(document.getElementById('main'));
-                 echartsRedBrokenLineInit(myChart,{});
+                 echartsRedBrokenLineInit(myChart, {}, 'Storm输入源吞吐量测试结果');
                 $("#showresult").click(function(){
                     $('#loaddata').modal('show')
                     showEcharts();
@@ -101,7 +101,7 @@
                   data:{},
                   type:"post",
                   success:function(data){
-                      echartsRedBrokenLineInit(myChart,data);
+                      echartsRedBrokenLineInit(myChart, data, 'Storm输入源吞吐量测试结果');
                       $('#loaddata').modal('hide')
                   },
                   error:function(XMLHttpRequest, textStatus, errorThrown) {

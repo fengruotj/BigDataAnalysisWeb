@@ -23,22 +23,17 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class BaseController {
 
+    protected static final Logger log = LoggerFactory.getLogger(BaseController.class);
     //后台项目基础url
     protected String mainPath="manage/";
-
     @Value("#{prop.StormBoltGsonFile}")
     protected String StormBoltGsonFilePath;
-
     @Value("#{prop.StormSpoutGsonFile}")
     protected String StormSpoutGsonFilePath;
-
     @Value("#{prop.StormWordCountGsonFile}")
     protected String StormWordCountGsonFile;
-
     @Value("#{prop.StromHdfsBenchMarkGsonFile}")
     protected String StormHdfsBenchMarkGsonFile;
-
-
     @Value("#{prop.hostname}")
     protected String hostname;
     @Value("#{prop.user}")
@@ -57,47 +52,33 @@ public class BaseController {
     protected String sparkSocektJar;
     @Value("#{prop.sparkKafkajar}")
     protected String sparkKafkajar;
-
     @Value("#{prop.clusterhosts}")
     protected String clusterhosts;
-
-    @ModelAttribute("BasePath")
-    public String getBasePath(HttpServletRequest httpServletRequest){
-        return httpServletRequest.getContextPath();
-    }
-
     protected Gson gson = new Gson();
-
-    protected static final Logger log = LoggerFactory.getLogger(BaseController.class);
-
     @Autowired
     protected FreeMarkerUtil freeMarkerUtil;
-
     @Autowired
     protected GsonUtil gsonUtil;
-
     @Autowired
     protected TAdministratorService tAdministratorService;
-
     @Autowired
     protected TSpouttuplecountService tSpouttuplecountService;
-
     @Autowired
     protected TTuplecountService tTuplecountService;
-
     @Autowired
     protected TWordcountService tWordcountService;
-
     @Autowired
     protected THdfsbytecountService tHdfsbytecountService;
-
+    @Autowired
+    protected TPredicthotkeyService tPredicthotkeyService;
     protected CpuUsage cpuUsage=CpuUsage.getInstance();
-
     protected MemUsage memUsage=MemUsage.getInstance();
-
     protected IoUsage ioUsage=IoUsage.getInstance();
-
     protected NetUsage netUsage=NetUsage.getInstance();
-
     protected JedisPool jedisPool= JedisPoolUtil.getJedisPoolInstance();
+
+    @ModelAttribute("BasePath")
+    public String getBasePath(HttpServletRequest httpServletRequest) {
+        return httpServletRequest.getContextPath();
+    }
 }
