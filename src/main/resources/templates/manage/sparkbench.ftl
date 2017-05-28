@@ -422,7 +422,7 @@
                 <li class="nav-item start active open">
                     <a href="javascript:;" class="nav-link nav-toggle">
                         <i class="icon-home"></i>
-                        <span class="title">大数据分析平台</span>
+                        <span class="title">实时流处理评测分析平台</span>
                         <span class="selected"></span>
                         <span class="arrow open"></span>
                     </a>
@@ -2793,13 +2793,11 @@
 <#include "public/bottom.ftl">
 
 <script type="text/javascript">
-
     $(function(){
         $("#cleanStromBenchMark").click(function(){
             cleanStormBenchMark();
         });
     });
-
     function socketstreamingsubmit(){
         alert("spark-socketstreaming submit");
     }
