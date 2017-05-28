@@ -1084,7 +1084,7 @@
             </div>
             <!-- END PAGE BAR -->
             <!-- BEGIN PAGE TITLE-->
-            <h3 class="page-title"> 大数据分析平台
+            <h3 class="page-title"> 实时流处理评测分析平台
                 <small>bigdata & analysisWeb</small>
             </h3>
             <!-- END PAGE TITLE-->
