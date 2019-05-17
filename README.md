@@ -1,5 +1,16 @@
 # BigDataAnalysisWeb
-* 这是一个大数据吞吐量测试 分析平台 
-* 通过图表的形式分析storm、spark、flink吞吐量变化情况
-* 并且可以保持分析结果，在集中页面进行集中显示
-* 增加了Storm吞吐量实时UI展示，可以实时展示系统吞吐量模型。并且可以保存实验结果，方便下次进行集中分析结果。
+* A big data throughput test analysis platform.
+* Analyze storm, spark, and flink throughput changes in the form of graphs.
+* Keep the analysis results and display them in a centralized page.
+* Storm throughput real-time UI presentation, which can display the system throughput model in real time. And you can save the experimental results, so that you can focus on the results of the next analysis.
+
+## License
+
+BigDataAnalysisWeb is released under the [Apache 2 license](http://www.apache.org/licenses/LICENSE-2.0.html).
+
+## Project Committers
+* Jie Tan ([@tjmaster](https://tjcug.github.io/))
+
+## Author and Copyright
+
+BigDataAnalysisWeb is developed in Cluster and Grid Computing Lab, Services Computing Technology and System Lab, Big Data Technology and System Lab, School of Computer Science and Technology, Huazhong University of Science and Technology, Wuhan, China by Jie Tan(tjmaster@hust.edu.cn)
